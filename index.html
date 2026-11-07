@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GUZFESA Servicios S.R.L. | Empresa constructora</title>
+<meta name="description" content="GUZFESA Servicios S.R.L.: construcción y obras civiles, movimiento de tierras, mantenimiento de infraestructura y alquiler de equipos y componentes.">
+<meta property="og:title" content="GUZFESA Servicios S.R.L. | Empresa constructora">
+<meta property="og:description" content="Soluciones integrales en construcción: obras civiles, movimiento de tierras, infraestructura y alquiler de equipos.">
+<meta property="og:image" content="images/construccion-grua.jpg">
+<meta name="theme-color" content="#151515">
+<link rel="icon" type="image/png" href="images/logo-guzfesa.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&amp;family=Barlow+Condensed:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF}
+html{scroll-behavior:smooth}
+a{color:#C8302F}a:hover{color:#141414}
+.gz-nav a{position:relative;color:#141414;text-decoration:none;padding:4px 0}
+.gz-nav a::after{content:"";position:absolute;left:0;bottom:-2px;width:100%;height:3px;background:#DF3F40;transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.gz-nav a:hover{color:#C8302F}.gz-nav a:hover::after{transform:scaleX(1)}
+.gz-btn{transition:transform .25s ease, box-shadow .25s ease, background-color .25s ease}
+.gz-btn:hover{transform:translateY(-3px);box-shadow:0 12px 24px rgba(0,0,0,.22)}
+.gz-tile img{transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.gz-tile:hover img{transform:scale(1.1)}
+.gz-tile .gz-cap{transition:transform .35s ease, background-color .35s ease}
+.gz-tile:hover .gz-cap{background:#C8302F;transform:translateY(-6px)}
+.gz-tile::after{content:"";position:absolute;inset:0;border:0 solid #DF3F40;transition:border-width .3s ease;pointer-events:none}
+.gz-tile:hover::after{border-width:6px}
+.gz-card{transition:transform .35s ease, box-shadow .35s ease}
+.gz-card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(0,0,0,.35)}
+.gz-card img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.gz-card:hover img{transform:scale(1.08)}
+.gz-tab{transition:background-color .25s ease, transform .25s ease}
+.gz-tab:hover{transform:translateX(6px)}
+.gz-hp img{transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.gz-hp:hover img{transform:scale(1.06)}
+.gz-hp:focus-visible{outline:3px solid #DF3F40;outline-offset:-3px}
+.gz-field{transition:border-color .2s ease}
+.gz-field:focus{outline:2px solid #C8302F;outline-offset:1px}
+.gz-ctrack{--per:3}
+.gz-ccard{flex:0 0 calc((100% - (var(--per) - 1) * 20px) / var(--per));min-width:0}
+.gz-gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:210px;gap:12px}
+.gz-wide{grid-column:span 2}.gz-tall{grid-row:span 2}
+
+@keyframes gzUpIn{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+@keyframes gzLeftIn{from{opacity:0;transform:translateX(-70px)}to{opacity:1;transform:none}}
+@keyframes gzFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes gzSpin{to{transform:rotate(360deg)}}
+@keyframes gzStripe{to{background-position:50.9px 0}}
+@keyframes gzPulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.6);opacity:0}}
+@keyframes gzWipe{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes gzFade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes gzZoom{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}
+@keyframes gzGrow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes gzDraw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes gzBlink{0%,100%{opacity:1}50%{opacity:.25}}
+@keyframes gzMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+.gz-in1{animation:gzUpIn .8s cubic-bezier(.2,.7,.2,1) .05s both}
+.gz-in2{animation:gzUpIn .8s cubic-bezier(.2,.7,.2,1) .2s both}
+.gz-in3{animation:gzUpIn .8s cubic-bezier(.2,.7,.2,1) .35s both}
+.gz-in4{animation:gzUpIn .8s cubic-bezier(.2,.7,.2,1) .5s both}
+.gz-draw{display:block;height:8px;background:#DF3F40;transform-origin:left;animation:gzDraw 1s cubic-bezier(.7,0,.2,1) .9s both}
+.gz-blink{animation:gzBlink 1.6s ease-in-out infinite}
+.gz-grow{display:block;height:100%;background:#C8302F;transform-origin:left;animation:gzGrow 4.5s linear both}
+.gz-float{animation:gzFloat 6s ease-in-out infinite}
+.gz-spin{animation:gzSpin 18s linear infinite}
+.gz-stripe{background:repeating-linear-gradient(-45deg,#DF3F40 0 18px,#141414 18px 36px);animation:gzStripe 1.6s linear infinite}
+.gz-pulse{position:absolute;inset:0;border:2px solid #FFFFFF;animation:gzPulse 1.8s ease-out infinite;pointer-events:none}
+.gz-panel{animation:gzFade .55s cubic-bezier(.2,.7,.2,1) both}
+.gz-wipe{animation:gzWipe .8s cubic-bezier(.7,0,.2,1) both}
+.gz-zoom{animation:gzZoom .35s ease both}
+.gz-track{display:flex;width:max-content;animation:gzMarquee 34s linear infinite}
+.gz-pill .gz-track{animation-duration:30s}
+.gz-pill:hover .gz-track{animation-play-state:paused}
+
+@supports (animation-timeline: view()) {
+.gz-reveal{animation:gzUpIn linear both;animation-timeline:view();animation-range:entry 0% cover 22%}
+.gz-reveal-l{animation:gzLeftIn linear both;animation-timeline:view();animation-range:entry 0% cover 22%}
+}
+
+@media (max-width:980px){.gz-gal{grid-template-columns:repeat(2,minmax(0,1fr))}.gz-ctrack{--per:2}}
+@media (max-width:620px){.gz-ctrack{--per:1}}
+@media (max-width:560px){.gz-gal{grid-template-columns:minmax(0,1fr)}.gz-wide{grid-column:auto}.gz-tall{grid-row:auto}}
+@media (prefers-reduced-motion: reduce){
+*,*::before,*::after{animation-duration:.001s !important;animation-iteration-count:1 !important;transition:none !important}
+}
+.gz-hero-panels .gz-hp{flex:1 1 0px;transition:flex-grow .9s cubic-bezier(.7,0,.2,1)}
+.gz-hero-panels .gz-hp.is-active{flex-grow:4.2}
+.hp-shade{position:absolute;inset:0;background:rgba(12,12,12,.62);transition:background-color .6s ease}
+.gz-hp.is-active .hp-shade{background:rgba(12,12,12,.30)}
+.gz-hp .hp-on{display:none}.gz-hp.is-active .hp-on{display:block}
+.gz-hp.is-active .hp-off{display:none}
+#svcTrack{will-change:transform}
+.svc-dot{height:40px;padding:0;border:0;background:transparent;cursor:pointer;display:flex;align-items:center}
+.svc-dot span{display:block;width:100%;height:5px;background:#CFCFCF;position:relative;overflow:hidden}
+.svc-dot.is-active span{background:#D9D9D9}
+.svc-dot.is-active span i{position:absolute;inset:0;background:#C8302F;transform-origin:left;animation:gzGrow 4.5s linear both}
+[hidden]{display:none !important}
+@media (max-width:760px){.gz-hero-panels{min-height:420px !important}.gz-hp .hp-on{left:60px !important;right:40px !important}.gz-hp .hp-off{display:none}}
+</style>
+</head>
+<body>
+<div style="width: 100%; font-family: 'Barlow', sans-serif; color: #141414; background: #FFFFFF; overflow-x: hidden">
+
+<header style="position: relative; z-index: 5; background: #FFFFFF; border-bottom: 1px solid #E6E6E6">
+<div style="max-width: 1280px; margin: 0 auto; padding: 12px clamp(20px, 4vw, 48px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px">
+<a href="#inicio" aria-label="GUZFESA, ir al inicio"><img loading="lazy" src="images/logo-guzfesa.png" alt="Logo GUZFESA Servicios S.R.L." style="height: 48px; width: auto; display: block"></a>
+<nav class="gz-nav" aria-label="Principal" style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 30px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 1.5px">
+<a href="#nosotros">NOSOTROS</a>
+<a href="#servicios">SERVICIOS</a>
+<a href="#alquiler">ALQUILER</a>
+<a href="#proyectos">PROYECTOS</a>
+<a href="#contacto">CONTACTO</a>
+</nav>
+<a class="gz-btn" href="#contacto" style="display: inline-flex; align-items: center; gap: 10px; min-height: 46px; padding: 0 22px; background: #C8302F; color: #FFFFFF; text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: 2px">COTIZAR PROYECTO</a>
+</div>
+</header>
+
+<section id="inicio" style="position: relative; display: flex; flex-wrap: wrap; min-height: 560px; background: #151515; color: #FFFFFF; overflow: hidden">
+<div style="position: relative; flex: 1 1 460px; min-width: 0; box-sizing: border-box; padding: 36px clamp(24px, 3.4vw, 56px) 36px clamp(24px, 5vw, 96px); display: flex; flex-direction: column; justify-content: center; background-color: #151515; background-image: linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px); background-size: 48px 48px">
+<div class="gz-in1" style="display: inline-flex; align-items: center; gap: 10px; align-self: flex-start; background: #C8302F; color: #FFFFFF; padding: 8px 14px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 3px"><span class="gz-blink" style="display: block; width: 8px; height: 8px; border-radius: 50%; background: #FFFFFF"></span>EMPRESA CONSTRUCTORA · S.R.L.</div>
+<h1 class="gz-in2" style="margin: 18px 0 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(42px, 4.5vw, 66px); line-height: 0.95; letter-spacing: -0.5px; color: #FFFFFF">SOLUCIONES INTEGRALES EN <span style="display: inline-block; color: #DF3F40">CONSTRUCCIÓN<span class="gz-draw" aria-hidden="true"></span></span></h1>
+<p class="gz-in3" style="margin: 18px 0 0; max-width: 500px; font-size: 17px; line-height: 1.55; color: #CFCFCF">Ejecutamos proyectos de construcción con soluciones técnicas eficientes y seguras, y complementamos cada obra con el alquiler de equipos y componentes.</p>
+<div class="gz-in4" style="margin-top: 26px; display: flex; flex-wrap: wrap; gap: 12px">
+<a class="gz-btn" href="#contacto" style="display: inline-flex; align-items: center; gap: 12px; min-height: 52px; padding: 0 26px; background: #C8302F; color: #FFFFFF; text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 2px">SOLICITAR COTIZACIÓN
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></a>
+<a class="gz-btn" href="#servicios" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border: 2px solid #FFFFFF; background: transparent; color: #FFFFFF; text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 2px">NUESTROS SERVICIOS</a>
+</div>
+
+</div>
+
+<div id="heroPanels" class="gz-hero-panels" style="flex: 1.25 1 560px; min-width: 0; min-height: 560px; display: flex; background: #151515">
+<a class="gz-hp is-active" data-i="0" href="#servicios" aria-label="1. CONSTRUCCIÓN: ver más" style="position: relative; display: block; min-width: 0; margin-left: 0px; overflow: hidden; clip-path: polygon(58px 0, 100% 0, calc(100% - 58px) 100%, 0 100%); color: #FFFFFF; text-decoration: none; background: #141414">
+<img loading="lazy" src="images/construccion-grua.jpg" alt="" loading="eager" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<div class="hp-shade" aria-hidden="true"></div>
+<div class="hp-on gz-panel" style="position: absolute; left: 76px; right: 70px; bottom: 36px; animation-delay: .35s">
+<div style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 54px; line-height: 1; color: #DF3F40">01</div>
+<div style="margin-top: 6px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(26px, 2.4vw, 36px); line-height: 1; letter-spacing: 0.5px">CONSTRUCCIÓN</div>
+<div style="margin-top: 10px; max-width: 360px; font-size: 15px; line-height: 1.5; color: #E4E4E4">Obras civiles con estructuras de concreto, cimentaciones, muros y losas.</div>
+<span style="margin-top: 14px; display: inline-flex; align-items: center; gap: 8px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 2px; border-bottom: 2px solid #DF3F40; padding-bottom: 3px">VER MÁS<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></span>
+</div>
+<div class="hp-off" style="position: absolute; left: 50%; bottom: 36px; margin-left: -12px; writing-mode: vertical-rl; transform: rotate(180deg); white-space: nowrap; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 3px"><span style="color: #DF3F40">01</span> · CONSTRUCCIÓN</div>
+</a>
+<a class="gz-hp" data-i="1" href="#servicios" aria-label="2. MOVIMIENTO DE TIERRAS: ver más" style="position: relative; display: block; min-width: 0; margin-left: -46px; overflow: hidden; clip-path: polygon(58px 0, 100% 0, calc(100% - 58px) 100%, 0 100%); color: #FFFFFF; text-decoration: none; background: #141414">
+<img loading="lazy" src="images/movimiento-tierras.jpg" alt="" loading="eager" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<div class="hp-shade" aria-hidden="true"></div>
+<div class="hp-on gz-panel" style="position: absolute; left: 76px; right: 70px; bottom: 36px; animation-delay: .35s">
+<div style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 54px; line-height: 1; color: #DF3F40">02</div>
+<div style="margin-top: 6px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(26px, 2.4vw, 36px); line-height: 1; letter-spacing: 0.5px">MOVIMIENTO DE TIERRAS</div>
+<div style="margin-top: 10px; max-width: 360px; font-size: 15px; line-height: 1.5; color: #E4E4E4">Excavación, nivelación y preparación de terrenos para una base sólida.</div>
+<span style="margin-top: 14px; display: inline-flex; align-items: center; gap: 8px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 2px; border-bottom: 2px solid #DF3F40; padding-bottom: 3px">VER MÁS<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></span>
+</div>
+<div class="hp-off" style="position: absolute; left: 50%; bottom: 36px; margin-left: -12px; writing-mode: vertical-rl; transform: rotate(180deg); white-space: nowrap; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 3px"><span style="color: #DF3F40">02</span> · MOVIMIENTO DE TIERRAS</div>
+</a>
+<a class="gz-hp" data-i="2" href="#servicios" aria-label="3. INFRAESTRUCTURA: ver más" style="position: relative; display: block; min-width: 0; margin-left: -46px; overflow: hidden; clip-path: polygon(58px 0, 100% 0, calc(100% - 58px) 100%, 0 100%); color: #FFFFFF; text-decoration: none; background: #141414">
+<img loading="lazy" src="images/nave-industrial.jpg" alt="" loading="eager" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<div class="hp-shade" aria-hidden="true"></div>
+<div class="hp-on gz-panel" style="position: absolute; left: 76px; right: 70px; bottom: 36px; animation-delay: .35s">
+<div style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 54px; line-height: 1; color: #DF3F40">03</div>
+<div style="margin-top: 6px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(26px, 2.4vw, 36px); line-height: 1; letter-spacing: 0.5px">INFRAESTRUCTURA</div>
+<div style="margin-top: 10px; max-width: 360px; font-size: 15px; line-height: 1.5; color: #E4E4E4">Construcción, ampliación y mantenimiento industrial y comercial.</div>
+<span style="margin-top: 14px; display: inline-flex; align-items: center; gap: 8px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 2px; border-bottom: 2px solid #DF3F40; padding-bottom: 3px">VER MÁS<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></span>
+</div>
+<div class="hp-off" style="position: absolute; left: 50%; bottom: 36px; margin-left: -12px; writing-mode: vertical-rl; transform: rotate(180deg); white-space: nowrap; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 3px"><span style="color: #DF3F40">03</span> · INFRAESTRUCTURA</div>
+</a>
+<a class="gz-hp" data-i="3" href="#alquiler" aria-label="4. ALQUILER DE EQUIPOS: ver más" style="position: relative; display: block; min-width: 0; margin-left: -46px; overflow: hidden; clip-path: polygon(58px 0, 100% 0, 100% 100%, 0 100%); color: #FFFFFF; text-decoration: none; background: #141414">
+<img loading="lazy" src="images/alquiler-elevador.jpg" alt="" loading="eager" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<div class="hp-shade" aria-hidden="true"></div>
+<div class="hp-on gz-panel" style="position: absolute; left: 76px; right: 70px; bottom: 36px; animation-delay: .35s">
+<div style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 54px; line-height: 1; color: #DF3F40">04</div>
+<div style="margin-top: 6px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(26px, 2.4vw, 36px); line-height: 1; letter-spacing: 0.5px">ALQUILER DE EQUIPOS</div>
+<div style="margin-top: 10px; max-width: 360px; font-size: 15px; line-height: 1.5; color: #E4E4E4">Equipos y componentes en óptimas condiciones para tu obra.</div>
+<span style="margin-top: 14px; display: inline-flex; align-items: center; gap: 8px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 2px; border-bottom: 2px solid #DF3F40; padding-bottom: 3px">VER MÁS<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></span>
+</div>
+<div class="hp-off" style="position: absolute; left: 50%; bottom: 36px; margin-left: -12px; writing-mode: vertical-rl; transform: rotate(180deg); white-space: nowrap; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 3px"><span style="color: #DF3F40">04</span> · ALQUILER DE EQUIPOS</div>
+</a>
+</div>
+</section>
+
+<section class="gz-pill" aria-label="Nuestros pilares" style="position: relative; background: #141414; color: #FFFFFF; overflow: hidden; padding: 22px 0; border-bottom: 4px solid #C8302F">
+<div class="gz-track" style="align-items: center">
+<div style="display: flex; align-items: center"><span style="display: inline-flex; align-items: center; gap: 14px; padding: 0 34px; border-right: 1px solid #2E2E2E; flex-shrink: 0"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#DF3F40" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 1px; white-space: nowrap">CUMPLIMIENTO DE PLAZOS</span></span><span style="display: inline-flex; align-items: center; gap: 14px; padding: 0 34px; border-right: 1px solid #2E2E2E; flex-shrink: 0"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#DF3F40" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 3 8l9 5 9-5-9-5z"></path><path d="m3 13 9 5 9-5"></path></svg><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 1px; white-space: nowrap">OPTIMIZACIÓN DE RECURSOS</span></span><span style="display: inline-flex; align-items: center; gap: 14px; padding: 0 34px; border-right: 1px solid #2E2E2E; flex-shrink: 0"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#DF3F40" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"></circle><path d="M8.5 14 7 22l5-3 5 3-1.5-8"></path></svg><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 1px; white-space: nowrap">RESULTADOS DE ALTA CALIDAD</span></span><span style="display: inline-flex; align-items: center; gap: 14px; padding: 0 34px; border-right: 1px solid #2E2E2E; flex-shrink: 0"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#DF3F40" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3z"></path><path d="m9 12 2 2 4-4"></path></svg><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 1px; white-space: nowrap">SEGURIDAD EN CADA OBRA</span></span></div>
+<div aria-hidden="true" style="display: flex; align-items: center"><span style="display: inline-flex; align-items: center; gap: 14px; padding: 0 34px; border-right: 1px solid #2E2E2E; flex-shrink: 0"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#DF3F40" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 1px; white-space: nowrap">CUMPLIMIENTO DE PLAZOS</span></span><span style="display: inline-flex; align-items: center; gap: 14px; padding: 0 34px; border-right: 1px solid #2E2E2E; flex-shrink: 0"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#DF3F40" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 3 8l9 5 9-5-9-5z"></path><path d="m3 13 9 5 9-5"></path></svg><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 1px; white-space: nowrap">OPTIMIZACIÓN DE RECURSOS</span></span><span style="display: inline-flex; align-items: center; gap: 14px; padding: 0 34px; border-right: 1px solid #2E2E2E; flex-shrink: 0"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#DF3F40" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"></circle><path d="M8.5 14 7 22l5-3 5 3-1.5-8"></path></svg><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 1px; white-space: nowrap">RESULTADOS DE ALTA CALIDAD</span></span><span style="display: inline-flex; align-items: center; gap: 14px; padding: 0 34px; border-right: 1px solid #2E2E2E; flex-shrink: 0"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#DF3F40" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3z"></path><path d="m9 12 2 2 4-4"></path></svg><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 1px; white-space: nowrap">SEGURIDAD EN CADA OBRA</span></span></div>
+<div aria-hidden="true" style="display: flex; align-items: center"><span style="display: inline-flex; align-items: center; gap: 14px; padding: 0 34px; border-right: 1px solid #2E2E2E; flex-shrink: 0"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#DF3F40" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 1px; white-space: nowrap">CUMPLIMIENTO DE PLAZOS</span></span><span style="display: inline-flex; align-items: center; gap: 14px; padding: 0 34px; border-right: 1px solid #2E2E2E; flex-shrink: 0"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#DF3F40" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 3 8l9 5 9-5-9-5z"></path><path d="m3 13 9 5 9-5"></path></svg><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 1px; white-space: nowrap">OPTIMIZACIÓN DE RECURSOS</span></span><span style="display: inline-flex; align-items: center; gap: 14px; padding: 0 34px; border-right: 1px solid #2E2E2E; flex-shrink: 0"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#DF3F40" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"></circle><path d="M8.5 14 7 22l5-3 5 3-1.5-8"></path></svg><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 1px; white-space: nowrap">RESULTADOS DE ALTA CALIDAD</span></span><span style="display: inline-flex; align-items: center; gap: 14px; padding: 0 34px; border-right: 1px solid #2E2E2E; flex-shrink: 0"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#DF3F40" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3z"></path><path d="m9 12 2 2 4-4"></path></svg><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 1px; white-space: nowrap">SEGURIDAD EN CADA OBRA</span></span></div>
+<div aria-hidden="true" style="display: flex; align-items: center"><span style="display: inline-flex; align-items: center; gap: 14px; padding: 0 34px; border-right: 1px solid #2E2E2E; flex-shrink: 0"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#DF3F40" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 1px; white-space: nowrap">CUMPLIMIENTO DE PLAZOS</span></span><span style="display: inline-flex; align-items: center; gap: 14px; padding: 0 34px; border-right: 1px solid #2E2E2E; flex-shrink: 0"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#DF3F40" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 3 8l9 5 9-5-9-5z"></path><path d="m3 13 9 5 9-5"></path></svg><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 1px; white-space: nowrap">OPTIMIZACIÓN DE RECURSOS</span></span><span style="display: inline-flex; align-items: center; gap: 14px; padding: 0 34px; border-right: 1px solid #2E2E2E; flex-shrink: 0"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#DF3F40" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"></circle><path d="M8.5 14 7 22l5-3 5 3-1.5-8"></path></svg><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 1px; white-space: nowrap">RESULTADOS DE ALTA CALIDAD</span></span><span style="display: inline-flex; align-items: center; gap: 14px; padding: 0 34px; border-right: 1px solid #2E2E2E; flex-shrink: 0"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#DF3F40" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3z"></path><path d="m9 12 2 2 4-4"></path></svg><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 1px; white-space: nowrap">SEGURIDAD EN CADA OBRA</span></span></div>
+</div>
+</section>
+
+<section id="nosotros" style="position: relative; background: #F4F4F2; overflow: hidden">
+<div aria-hidden="true" style="position: absolute; right: -30px; top: 10px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 220px; line-height: 1; color: #E9E9E6; pointer-events: none">01</div>
+<div style="position: relative; max-width: 1280px; margin: 0 auto; padding: clamp(44px, 5vw, 60px) clamp(20px, 4vw, 48px); display: flex; flex-wrap: wrap; gap: clamp(32px, 5vw, 64px); align-items: center">
+<div class="gz-reveal-l" style="flex: 1 1 420px; min-width: 0; max-width: 540px; position: relative; padding: 0 26px 36px 0">
+<div class="gz-float" style="position: absolute; right: 0; bottom: 0; width: 70%; height: 70%; background: #DF3F40; clip-path: polygon(0 0, 100% 0, 100% 100%, 12% 100%)"></div>
+<img loading="lazy" src="images/muro-perimetral.jpg" alt="Trabajador de GUZFESA revisando un muro de bloques" style="position: relative; display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; clip-path: polygon(0 0, 100% 0, 92% 100%, 0 100%)">
+<div aria-hidden="true" style="position: absolute; left: -22px; top: -22px; width: 124px; height: 124px; border-radius: 50%; background: #141414; display: flex; align-items: center; justify-content: center">
+<svg class="gz-spin" width="112" height="112" viewBox="0 0 128 128" aria-hidden="true" style="position: absolute; left: 6px; top: 6px"><defs><path id="gzCircle" d="M64 64 m-48 0 a48 48 0 1 1 96 0 a48 48 0 1 1 -96 0"></path></defs><text style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13.5px; letter-spacing: 4px" fill="#FFFFFF"><textPath href="#gzCircle">GUZFESA · SERVICIOS · S.R.L · CONSTRUCCIÓN ·</textPath></text></svg>
+<span style="display: block; width: 30px; height: 18px; background: #DF3F40; clip-path: polygon(30% 0, 100% 0, 70% 100%, 0 100%)"></span>
+</div>
+<div style="position: absolute; left: 20px; bottom: 10px; background: #141414; color: #FFFFFF; padding: 12px 18px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 3px">DESDE LA BASE HASTA LA ENTREGA</div>
+</div>
+<div class="gz-reveal" style="flex: 1 1 440px; min-width: 0">
+<div style="display: flex; align-items: center; gap: 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 4px; color: #C8302F"><span style="display: block; width: 32px; height: 3px; background: #DF3F40"></span>QUIÉNES SOMOS</div>
+<h2 style="margin: 10px 0 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(36px, 3.8vw, 52px); line-height: 0.95">SOMOS GUZFESA <span style="color: #DF3F40">SERVICIOS</span></h2>
+<p style="margin: 14px 0 0; font-size: 18px; line-height: 1.5; font-weight: 500; color: #1D1D1D">Nos especializamos en la ejecución de proyectos de construcción, brindando soluciones técnicas eficientes y seguras.</p>
+<p style="margin: 10px 0 0; font-size: 16px; line-height: 1.6; color: #4A4A4A">Nuestro enfoque está en cumplir los plazos, optimizar recursos y garantizar resultados de alta calidad, con el respaldo del alquiler de equipos y componentes del rubro.</p>
+<div style="margin-top: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px">
+<div class="gz-card" style="background: #FFFFFF; padding: 18px 20px; border-top: 4px solid #DF3F40">
+<div style="display: flex; align-items: center; gap: 10px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8302F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1"></circle></svg><h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px">MISIÓN</h3></div>
+<p style="margin: 8px 0 0; font-size: 15px; line-height: 1.5; color: #4A4A4A">Brindar servicios de construcción confiables y de alta calidad, ejecutados con profesionalismo, seguridad y eficiencia, aportando valor real a cada proyecto.</p>
+</div>
+<div class="gz-card" style="background: #141414; color: #FFFFFF; padding: 18px 20px; border-top: 4px solid #DF3F40">
+<div style="display: flex; align-items: center; gap: 10px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#DF3F40" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"></path><circle cx="12" cy="12" r="3"></circle></svg><h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px">VISIÓN</h3></div>
+<p style="margin: 8px 0 0; font-size: 15px; line-height: 1.5; color: #D0D0D0">Ser una empresa reconocida por su excelencia en servicios de construcción, destacando por su compromiso, cumplimiento y capacidad de adaptarse al mercado.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="servicios" aria-roledescription="carrusel" aria-label="Nuestros servicios" style="position: relative; background: #F4F4F2; overflow: hidden">
+<div aria-hidden="true" style="position: absolute; left: -30px; top: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 220px; line-height: 1; color: #EAEAE7; pointer-events: none">02</div>
+<div style="position: relative; max-width: 1280px; margin: 0 auto; padding: clamp(40px, 4.5vw, 56px) clamp(20px, 4vw, 48px)">
+<div class="gz-reveal" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 40px">
+<div style="flex: 1 1 520px; min-width: 0">
+<div style="display: flex; align-items: center; gap: 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 4px; color: #C8302F"><span style="display: block; width: 32px; height: 3px; background: #DF3F40"></span>LO QUE HACEMOS</div>
+<h2 style="margin: 10px 0 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(34px, 3.6vw, 50px); line-height: 0.95">NUESTROS <span style="color: #C8302F">SERVICIOS</span></h2>
+
+</div>
+<div style="display: flex; align-items: center; gap: 12px">
+<span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 26px; margin-right: 6px"><span id="svcLabel" style="color: #C8302F">01</span><span style="font-size: 18px; color: #767676"> / <span id="svcTotal">03</span></span></span>
+<button type="button" class="gz-btn" id="svcPrev" aria-label="Servicio anterior" style="width: 52px; height: 52px; border: 2px solid #141414; background: #FFFFFF; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 6-6 6 6 6"></path></svg></button>
+<button type="button" class="gz-btn" id="svcNext" aria-label="Servicio siguiente" style="width: 52px; height: 52px; border: 0; background: #C8302F; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"></path></svg></button>
+</div>
+</div>
+
+<div id="svcViewport" style="margin-top: 20px; overflow: hidden; padding: 6px 0 10px">
+<div class="gz-ctrack" id="svcTrack" style="display: flex; gap: 20px; transition: transform 0.8s cubic-bezier(0.7, 0, 0.2, 1)">
+<article class="gz-ccard gz-card" role="group" aria-roledescription="diapositiva" aria-label="1 de 5: CONSTRUCCIÓN Y OBRAS CIVILES" style="background: #FFFFFF; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.06)">
+<div style="position: relative; height: 140px; overflow: hidden">
+<img loading="lazy" src="images/obras-civiles.jpg" alt="Estructura de concreto y acero en construcción" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<div style="position: absolute; left: 0; top: 0; padding: 8px 18px 8px 14px; background: #C8302F; color: #FFFFFF; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 24px; line-height: 1; clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 100%, 0 100%)">01</div>
+<div style="position: absolute; right: 0; bottom: 0; background: #141414; color: #FFFFFF; padding: 6px 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 2px">OBRAS CIVILES</div>
+</div>
+<div style="padding: 18px 20px 20px; display: flex; flex-direction: column; flex: 1; border-bottom: 4px solid #C8302F">
+<h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 24px; line-height: 1.02">CONSTRUCCIÓN Y OBRAS CIVILES</h3>
+<p style="margin: 8px 0 0; font-size: 14.5px; line-height: 1.5; color: #4A4A4A; flex: 1">Desarrollamos obras civiles que incluyen estructuras de concreto, cimentaciones, muros y losas, ejecutadas bajo criterios técnicos y altos estándares de calidad, durabilidad y seguridad estructural.</p>
+<div style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px">
+<span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; background: #F4F4F2; border-left: 3px solid #C8302F; font-size: 13px; font-weight: 600; color: #141414">Estructuras de concreto</span>
+<span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; background: #F4F4F2; border-left: 3px solid #C8302F; font-size: 13px; font-weight: 600; color: #141414">Cimentaciones</span>
+<span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; background: #F4F4F2; border-left: 3px solid #C8302F; font-size: 13px; font-weight: 600; color: #141414">Muros y losas</span>
+
+</div>
+<a href="#contacto" style="margin-top: 14px; align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; color: #141414; text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 2px; border-bottom: 2px solid #C8302F; padding-bottom: 3px">COTIZAR ESTE SERVICIO<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8302F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></a>
+</div>
+</article>
+<article class="gz-ccard gz-card" role="group" aria-roledescription="diapositiva" aria-label="2 de 5: MOVIMIENTO DE TIERRAS" style="background: #FFFFFF; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.06)">
+<div style="position: relative; height: 140px; overflow: hidden">
+<img loading="lazy" src="images/movimiento-tierras.jpg" alt="Excavadora realizando movimiento de tierras" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<div style="position: absolute; left: 0; top: 0; padding: 8px 18px 8px 14px; background: #C8302F; color: #FFFFFF; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 24px; line-height: 1; clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 100%, 0 100%)">02</div>
+<div style="position: absolute; right: 0; bottom: 0; background: #141414; color: #FFFFFF; padding: 6px 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 2px">TERRENOS</div>
+</div>
+<div style="padding: 18px 20px 20px; display: flex; flex-direction: column; flex: 1; border-bottom: 4px solid #C8302F">
+<h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 24px; line-height: 1.02">MOVIMIENTO DE TIERRAS</h3>
+<p style="margin: 8px 0 0; font-size: 14.5px; line-height: 1.5; color: #4A4A4A; flex: 1">Realizamos trabajos de excavación, nivelación y preparación de terrenos, garantizando una base sólida y segura para el inicio de cualquier proyecto constructivo, optimizando tiempos y recursos.</p>
+<div style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px">
+<span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; background: #F4F4F2; border-left: 3px solid #C8302F; font-size: 13px; font-weight: 600; color: #141414">Excavación</span>
+<span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; background: #F4F4F2; border-left: 3px solid #C8302F; font-size: 13px; font-weight: 600; color: #141414">Nivelación</span>
+<span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; background: #F4F4F2; border-left: 3px solid #C8302F; font-size: 13px; font-weight: 600; color: #141414">Preparación de terrenos</span>
+
+</div>
+<a href="#contacto" style="margin-top: 14px; align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; color: #141414; text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 2px; border-bottom: 2px solid #C8302F; padding-bottom: 3px">COTIZAR ESTE SERVICIO<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8302F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></a>
+</div>
+</article>
+<article class="gz-ccard gz-card" role="group" aria-roledescription="diapositiva" aria-label="3 de 5: MANTENIMIENTO DE INFRAESTRUCTURA" style="background: #FFFFFF; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.06)">
+<div style="position: relative; height: 140px; overflow: hidden">
+<img loading="lazy" src="images/estructura-metalica.jpg" alt="Montaje de estructura metálica en nave industrial" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<div style="position: absolute; left: 0; top: 0; padding: 8px 18px 8px 14px; background: #C8302F; color: #FFFFFF; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 24px; line-height: 1; clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 100%, 0 100%)">03</div>
+<div style="position: absolute; right: 0; bottom: 0; background: #141414; color: #FFFFFF; padding: 6px 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 2px">INDUSTRIAL Y COMERCIAL</div>
+</div>
+<div style="padding: 18px 20px 20px; display: flex; flex-direction: column; flex: 1; border-bottom: 4px solid #C8302F">
+<h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 24px; line-height: 1.02">MANTENIMIENTO DE INFRAESTRUCTURA</h3>
+<p style="margin: 8px 0 0; font-size: 14.5px; line-height: 1.5; color: #4A4A4A; flex: 1">Ejecutamos la construcción, ampliación y mantenimiento de infraestructura industrial y comercial, optimizando recursos y asegurando la durabilidad de cada estructura, cumpliendo normas técnicas y de seguridad.</p>
+<div style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px">
+<span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; background: #F4F4F2; border-left: 3px solid #C8302F; font-size: 13px; font-weight: 600; color: #141414">Construcción</span>
+<span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; background: #F4F4F2; border-left: 3px solid #C8302F; font-size: 13px; font-weight: 600; color: #141414">Ampliación</span>
+<span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; background: #F4F4F2; border-left: 3px solid #C8302F; font-size: 13px; font-weight: 600; color: #141414">Mantenimiento</span>
+
+</div>
+<a href="#contacto" style="margin-top: 14px; align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; color: #141414; text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 2px; border-bottom: 2px solid #C8302F; padding-bottom: 3px">COTIZAR ESTE SERVICIO<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8302F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></a>
+</div>
+</article>
+<article class="gz-ccard gz-card" role="group" aria-roledescription="diapositiva" aria-label="4 de 5: ALQUILER DE EQUIPOS" style="background: #FFFFFF; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.06)">
+<div style="position: relative; height: 140px; overflow: hidden">
+<img loading="lazy" src="images/alquiler-elevador.jpg" alt="Plataforma elevadora articulada disponible para alquiler" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<div style="position: absolute; left: 0; top: 0; padding: 8px 18px 8px 14px; background: #C8302F; color: #FFFFFF; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 24px; line-height: 1; clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 100%, 0 100%)">04</div>
+<div style="position: absolute; right: 0; bottom: 0; background: #141414; color: #FFFFFF; padding: 6px 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 2px">ALQUILER</div>
+</div>
+<div style="padding: 18px 20px 20px; display: flex; flex-direction: column; flex: 1; border-bottom: 4px solid #C8302F">
+<h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 24px; line-height: 1.02">ALQUILER DE EQUIPOS</h3>
+<p style="margin: 8px 0 0; font-size: 14.5px; line-height: 1.5; color: #4A4A4A; flex: 1">Disponemos de equipos compactos y funcionales para trabajos de obra civil, mantenimiento y ejecución en espacios reducidos, entregados en condiciones óptimas para un desempeño seguro y eficiente.</p>
+<div style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px">
+<span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; background: #F4F4F2; border-left: 3px solid #C8302F; font-size: 13px; font-weight: 600; color: #141414">Obra civil</span>
+<span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; background: #F4F4F2; border-left: 3px solid #C8302F; font-size: 13px; font-weight: 600; color: #141414">Mantenimiento</span>
+<span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; background: #F4F4F2; border-left: 3px solid #C8302F; font-size: 13px; font-weight: 600; color: #141414">Espacios reducidos</span>
+
+</div>
+<a href="#contacto" style="margin-top: 14px; align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; color: #141414; text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 2px; border-bottom: 2px solid #C8302F; padding-bottom: 3px">COTIZAR ESTE SERVICIO<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8302F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></a>
+</div>
+</article>
+<article class="gz-ccard gz-card" role="group" aria-roledescription="diapositiva" aria-label="5 de 5: ALQUILER DE COMPONENTES" style="background: #FFFFFF; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.06)">
+<div style="position: relative; height: 140px; overflow: hidden">
+<img loading="lazy" src="images/alquiler-rodillo.jpg" alt="Rodillo compactador disponible para alquiler" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<div style="position: absolute; left: 0; top: 0; padding: 8px 18px 8px 14px; background: #C8302F; color: #FFFFFF; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 24px; line-height: 1; clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 100%, 0 100%)">05</div>
+<div style="position: absolute; right: 0; bottom: 0; background: #141414; color: #FFFFFF; padding: 6px 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 2px">ALQUILER</div>
+</div>
+<div style="padding: 18px 20px 20px; display: flex; flex-direction: column; flex: 1; border-bottom: 4px solid #C8302F">
+<h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 24px; line-height: 1.02">ALQUILER DE COMPONENTES</h3>
+<p style="margin: 8px 0 0; font-size: 14.5px; line-height: 1.5; color: #4A4A4A; flex: 1">Componentes y equipos auxiliares que optimizan los procesos constructivos en campo, diseñados para brindar estabilidad, resistencia y confiabilidad, reduciendo tiempos muertos.</p>
+<div style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px">
+<span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; background: #F4F4F2; border-left: 3px solid #C8302F; font-size: 13px; font-weight: 600; color: #141414">Estabilidad</span>
+<span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; background: #F4F4F2; border-left: 3px solid #C8302F; font-size: 13px; font-weight: 600; color: #141414">Resistencia</span>
+<span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; background: #F4F4F2; border-left: 3px solid #C8302F; font-size: 13px; font-weight: 600; color: #141414">Confiabilidad</span>
+
+</div>
+<a href="#contacto" style="margin-top: 14px; align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; color: #141414; text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 2px; border-bottom: 2px solid #C8302F; padding-bottom: 3px">COTIZAR ESTE SERVICIO<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8302F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></a>
+</div>
+</article>
+</div>
+</div>
+
+<div style="margin-top: 6px; display: flex; align-items: center; gap: 8px">
+<span id="svcDots" style="display: flex; align-items: center; gap: 8px"></span>
+<span style="margin-left: auto; font-size: 14px; color: #666666">Se mueve solo · pasa el cursor para detenerlo</span>
+</div>
+</div>
+</section>
+
+<div class="gz-stripe" aria-hidden="true" style="height: 14px"></div>
+
+<section id="alquiler" style="position: relative; background: #141414; color: #FFFFFF; overflow: hidden">
+<div aria-hidden="true" style="position: absolute; right: -30px; top: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 220px; line-height: 1; color: transparent; -webkit-text-stroke: 1px #2E2E2E; pointer-events: none">03</div>
+<div style="position: relative; max-width: 1280px; margin: 0 auto; padding: clamp(44px, 5vw, 60px) clamp(20px, 4vw, 48px)">
+<div class="gz-reveal" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 14px 48px">
+<div style="flex: 1 1 380px; min-width: 0">
+<div style="display: flex; align-items: center; gap: 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 4px; color: #FF6B6C"><span style="display: block; width: 32px; height: 3px; background: #DF3F40"></span>SERVICIOS COMPLEMENTARIOS</div>
+<h2 style="margin: 10px 0 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(36px, 3.8vw, 52px); line-height: 0.95">ALQUILER DE EQUIPOS <span style="color: #DF3F40">Y COMPONENTES</span></h2>
+</div>
+<p style="flex: 1 1 380px; min-width: 0; margin: 0; font-size: 16px; line-height: 1.55; color: #C9C9C9">Soluciones prácticas y eficientes que facilitan la ejecución continua y oportuna de cada proyecto.</p>
+</div>
+<div style="margin-top: 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(440px, 1fr)); gap: 20px">
+<article class="gz-card gz-reveal" style="background: #222222; display: flex; flex-wrap: wrap; overflow: hidden">
+<div style="flex: 1 1 200px; min-width: 0; position: relative; min-height: 280px; overflow: hidden">
+<img loading="lazy" src="images/alquiler-elevador.jpg" alt="Plataforma elevadora articulada disponible para alquiler" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%">
+</div>
+<div style="flex: 1.3 1 240px; min-width: 0; padding: 24px">
+<div style="width: 46px; height: 46px; background: #C8302F; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v9H3z"></path><path d="M14 10h4l3 3v3h-7"></path><circle cx="7" cy="17" r="2"></circle><circle cx="17" cy="17" r="2"></circle></svg></div>
+<h3 style="margin: 14px 0 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 27px; line-height: 1">ALQUILER DE EQUIPOS</h3>
+<p style="margin: 10px 0 0; font-size: 15px; line-height: 1.55; color: #C9C9C9">Equipos compactos y funcionales para obra civil, mantenimiento y espacios reducidos, entregados en condiciones óptimas para un desempeño seguro y eficiente.</p>
+</div>
+</article>
+<article class="gz-card gz-reveal" style="background: #222222; display: flex; flex-wrap: wrap; overflow: hidden">
+<div style="flex: 1 1 200px; min-width: 0; position: relative; min-height: 280px; overflow: hidden">
+<img loading="lazy" src="images/alquiler-rodillo.jpg" alt="Rodillo compactador disponible para alquiler" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%">
+</div>
+<div style="flex: 1.3 1 240px; min-width: 0; padding: 24px">
+<div style="width: 46px; height: 46px; background: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4 2.5-2.5z"></path></svg></div>
+<h3 style="margin: 14px 0 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 27px; line-height: 1">ALQUILER DE COMPONENTES</h3>
+<p style="margin: 10px 0 0; font-size: 15px; line-height: 1.55; color: #C9C9C9">Componentes y equipos auxiliares que brindan estabilidad, resistencia y confiabilidad, asegurando una operación fluida y reduciendo tiempos muertos.</p>
+</div>
+</article>
+</div>
+<div class="gz-reveal" style="margin-top: 20px; border: 1px solid #3A3A3A; padding: 16px 22px; display: flex; flex-wrap: wrap; gap: 12px 34px; align-items: center">
+<span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 3px; color: #FF6B6C">GARANTÍA GUZFESA</span>
+<span style="display: inline-flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DF3F40" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"></path></svg>Óptimas condiciones operativas</span>
+<span style="display: inline-flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DF3F40" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"></path></svg>Mantenimiento constante</span>
+<span style="display: inline-flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DF3F40" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"></path></svg>Control de calidad</span>
+</div>
+</div>
+</section>
+
+<div class="gz-stripe" aria-hidden="true" style="height: 14px"></div>
+
+<section id="proyectos" style="position: relative; background: #FFFFFF; overflow: hidden">
+<div aria-hidden="true" style="position: absolute; left: -30px; top: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 220px; line-height: 1; color: #F3F3F1; pointer-events: none">04</div>
+<div style="position: relative; max-width: 1280px; margin: 0 auto; padding: clamp(44px, 5vw, 60px) clamp(20px, 4vw, 48px)">
+<div class="gz-reveal" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 14px 48px">
+<div style="flex: 1 1 380px; min-width: 0">
+<div style="display: flex; align-items: center; gap: 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 4px; color: #C8302F"><span style="display: block; width: 32px; height: 3px; background: #DF3F40"></span>NUESTRO TRABAJO EN CAMPO</div>
+<h2 style="margin: 10px 0 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(36px, 3.8vw, 52px); line-height: 0.95">GALERÍA DE <span style="color: #DF3F40">PROYECTOS</span></h2>
+</div>
+<p style="flex: 0 1 320px; min-width: 0; margin: 0; font-size: 15px; line-height: 1.55; color: #4A4A4A">Toca cualquier imagen para verla en grande.</p>
+</div>
+<div class="gz-gal gz-reveal" style="margin-top: 26px">
+<button type="button" class="gz-tile gz-tall" data-lb="0" aria-label="Ver foto: Movimiento de tierras" style="position: relative; padding: 0; border: 0; overflow: hidden; cursor: zoom-in; background: #E6E6E6"><img loading="lazy" src="images/excavadora-obra.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block"><span class="gz-cap" style="position: absolute; left: 0; bottom: 0; background: #141414; color: #FFFFFF; padding: 8px 14px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 2px">MOVIMIENTO DE TIERRAS</span></button>
+<button type="button" class="gz-tile gz-wide" data-lb="1" aria-label="Ver foto: Nave industrial" style="position: relative; padding: 0; border: 0; overflow: hidden; cursor: zoom-in; background: #E6E6E6"><img loading="lazy" src="images/nave-industrial.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block"><span class="gz-cap" style="position: absolute; left: 0; bottom: 0; background: #141414; color: #FFFFFF; padding: 8px 14px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 2px">NAVE INDUSTRIAL</span></button>
+<div style="position: relative; background: #C8302F; color: #FFFFFF; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden">
+<div class="gz-spin" aria-hidden="true" style="position: absolute; right: -40px; top: -40px; width: 130px; height: 130px; border: 12px dashed rgba(255,255,255,0.25); border-radius: 50%"></div>
+<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11h5v6H4z"></path><path d="M4 11c0-3 1.5-5 4-6"></path><path d="M14 11h5v6h-5z"></path><path d="M14 11c0-3 1.5-5 4-6"></path></svg>
+<div style="position: relative; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 28px; line-height: 1">CALIDAD EN CADA ETAPA DEL PROCESO</div>
+</div>
+<button type="button" class="gz-tile" data-lb="2" aria-label="Ver foto: Muro perimetral" style="position: relative; padding: 0; border: 0; overflow: hidden; cursor: zoom-in; background: #E6E6E6"><img loading="lazy" src="images/muro-perimetral.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block"><span class="gz-cap" style="position: absolute; left: 0; bottom: 0; background: #141414; color: #FFFFFF; padding: 8px 14px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 2px">MURO PERIMETRAL</span></button>
+<button type="button" class="gz-tile" data-lb="3" aria-label="Ver foto: Equipo en obra" style="position: relative; padding: 0; border: 0; overflow: hidden; cursor: zoom-in; background: #E6E6E6"><img loading="lazy" src="images/equipo-obra.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block"><span class="gz-cap" style="position: absolute; left: 0; bottom: 0; background: #141414; color: #FFFFFF; padding: 8px 14px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 2px">EQUIPO EN OBRA</span></button>
+<button type="button" class="gz-tile" data-lb="4" aria-label="Ver foto: Estructura metálica" style="position: relative; padding: 0; border: 0; overflow: hidden; cursor: zoom-in; background: #E6E6E6"><img loading="lazy" src="images/estructura-metalica.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block"><span class="gz-cap" style="position: absolute; left: 0; bottom: 0; background: #141414; color: #FFFFFF; padding: 8px 14px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 2px">ESTRUCTURA METÁLICA</span></button>
+</div>
+</div>
+<div id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Foto ampliada" class="gz-zoom" style="position: absolute; inset: 0; z-index: 20; background: rgba(12,12,12,0.95); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 20px">
+<div style="display: flex; align-items: center; gap: 14px; width: 100%; max-width: 1000px; justify-content: space-between">
+<span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 3px; color: #FFFFFF" id="lbLabel"></span>
+<button type="button" id="lbClose" aria-label="Cerrar" style="width: 46px; height: 46px; border: 0; background: #C8302F; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6 6 18"></path></svg></button>
+</div>
+<img id="lbImg" src="" alt="" style="max-width: min(1000px, 100%); max-height: 68%; object-fit: contain; display: block">
+<div style="display: flex; gap: 12px">
+<button type="button" id="lbPrev" aria-label="Foto anterior" style="width: 50px; height: 50px; border: 2px solid #FFFFFF; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 6-6 6 6 6"></path></svg></button>
+<button type="button" id="lbNext" aria-label="Foto siguiente" style="width: 50px; height: 50px; border: 2px solid #FFFFFF; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"></path></svg></button>
+</div>
+</div>
+</section>
+
+<section aria-label="Llamado a la acción" style="position: relative; background: #C8302F; color: #FFFFFF; overflow: hidden">
+<div aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 50%; margin-top: -0.5em; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 170px; line-height: 1; color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,0.28); white-space: nowrap; pointer-events: none">
+<div class="gz-track"><span style="padding-right: 60px">COTIZA TU PROYECTO · COTIZA TU PROYECTO ·</span><span style="padding-right: 60px">COTIZA TU PROYECTO · COTIZA TU PROYECTO ·</span></div>
+</div>
+<div aria-hidden="true" style="position: absolute; right: -40px; top: 0; width: 30%; height: 100%; background: #141414; clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%)"></div>
+<div style="position: relative; max-width: 1280px; margin: 0 auto; padding: clamp(44px, 5vw, 64px) clamp(20px, 4vw, 48px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px">
+<div class="gz-reveal" style="flex: 1 1 460px; min-width: 0">
+<h2 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(36px, 4.2vw, 58px); line-height: 0.95">¿TIENES UN PROYECTO EN MENTE?</h2>
+<p style="margin: 12px 0 0; font-size: 17px; line-height: 1.5; color: #FFFFFF">Cuéntanos qué necesitas y te ayudamos a ejecutarlo con calidad y en plazo.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a class="gz-btn" href="#contacto" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 28px; background: #FFFFFF; color: #141414; text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: 2px">ESCRÍBENOS</a>
+<a class="gz-btn" href="tel:8292767396" style="position: relative; display: inline-flex; align-items: center; gap: 10px; min-height: 54px; padding: 0 28px; border: 2px solid #FFFFFF; color: #FFFFFF; text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: 2px"><span class="gz-pulse" aria-hidden="true"></span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>829-276-7396</a>
+</div>
+</div>
+</section>
+
+<section id="contacto" style="position: relative; background: #F4F4F2; overflow: hidden">
+<div aria-hidden="true" style="position: absolute; right: -30px; bottom: -40px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 220px; line-height: 1; color: #E9E9E6; pointer-events: none">05</div>
+<div style="position: relative; max-width: 1280px; margin: 0 auto; padding: clamp(44px, 5vw, 60px) clamp(20px, 4vw, 48px); display: flex; flex-wrap: wrap; gap: clamp(28px, 4vw, 56px); align-items: center">
+<div class="gz-reveal-l" style="flex: 1 1 320px; min-width: 0">
+<div style="display: flex; align-items: center; gap: 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 4px; color: #C8302F"><span style="display: block; width: 32px; height: 3px; background: #DF3F40"></span>CONTACTO</div>
+<h2 style="margin: 10px 0 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(36px, 3.8vw, 52px); line-height: 0.95">HABLEMOS DE TU <span style="color: #DF3F40">OBRA</span></h2>
+<p style="margin: 14px 0 0; font-size: 16px; line-height: 1.55; color: #4A4A4A">Escríbenos para cotizar un proyecto de construcción o el alquiler de equipos y componentes.</p>
+<div style="margin-top: 22px; display: flex; flex-direction: column; gap: 12px">
+<a class="gz-btn" href="tel:8292767396" style="display: flex; align-items: center; gap: 14px; text-decoration: none; color: #141414; background: #FFFFFF; padding: 12px">
+<span style="width: 48px; height: 48px; background: #141414; display: flex; align-items: center; justify-content: center; flex-shrink: 0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+<span><span style="display: block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 3px; color: #666666">TELÉFONO</span><span style="display: block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 25px; line-height: 1.1">829-276-7396</span></span>
+</a>
+<a class="gz-btn" href="mailto:guzfesaserviciossrl@hotmail.com" style="display: flex; align-items: center; gap: 14px; text-decoration: none; color: #141414; background: #FFFFFF; padding: 12px">
+<span style="width: 48px; height: 48px; background: #C8302F; display: flex; align-items: center; justify-content: center; flex-shrink: 0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg></span>
+<span style="min-width: 0"><span style="display: block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 3px; color: #666666">CORREO</span><span style="display: block; font-size: 17px; font-weight: 600; overflow-wrap: anywhere">guzfesaserviciossrl@hotmail.com</span></span>
+</a>
+</div>
+</div>
+
+<div class="gz-reveal" style="flex: 1.4 1 440px; min-width: 0; background: #FFFFFF; padding: clamp(20px, 2.4vw, 30px); border-top: 6px solid #DF3F40; box-shadow: 0 30px 60px rgba(0,0,0,0.08)">
+<form id="contactForm" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px">
+<div style="display: flex; flex-direction: column; gap: 5px"><label for="gz-nombre" style="font-weight: 600; font-size: 14px">Nombre</label><input id="gz-nombre" class="gz-field" type="text" name="nombre" required placeholder="Tu nombre" style="min-height: 44px; padding: 0 12px; border: 1px solid #BDBDBD; font-family: 'Barlow', sans-serif; font-size: 16px; background: #FFFFFF; color: #141414"></div>
+<div style="display: flex; flex-direction: column; gap: 5px"><label for="gz-empresa" style="font-weight: 600; font-size: 14px">Empresa</label><input id="gz-empresa" class="gz-field" type="text" name="empresa" placeholder="Nombre de tu empresa" style="min-height: 44px; padding: 0 12px; border: 1px solid #BDBDBD; font-family: 'Barlow', sans-serif; font-size: 16px; background: #FFFFFF; color: #141414"></div>
+<div style="display: flex; flex-direction: column; gap: 5px"><label for="gz-correo" style="font-weight: 600; font-size: 14px">Correo</label><input id="gz-correo" class="gz-field" type="email" name="correo" required placeholder="nombre@correo.com" style="min-height: 44px; padding: 0 12px; border: 1px solid #BDBDBD; font-family: 'Barlow', sans-serif; font-size: 16px; background: #FFFFFF; color: #141414"></div>
+<div style="display: flex; flex-direction: column; gap: 5px"><label for="gz-telefono" style="font-weight: 600; font-size: 14px">Teléfono</label><input id="gz-telefono" class="gz-field" type="tel" name="telefono" placeholder="Tu número" style="min-height: 44px; padding: 0 12px; border: 1px solid #BDBDBD; font-family: 'Barlow', sans-serif; font-size: 16px; background: #FFFFFF; color: #141414"></div>
+<div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 5px"><label for="gz-servicio" style="font-weight: 600; font-size: 14px">Servicio de interés</label><select id="gz-servicio" class="gz-field" name="servicio" style="min-height: 44px; padding: 0 10px; border: 1px solid #BDBDBD; font-family: 'Barlow', sans-serif; font-size: 16px; background: #FFFFFF; color: #141414"><option>Construcción y obras civiles</option><option>Movimiento de tierras</option><option>Mantenimiento de infraestructura</option><option>Alquiler de equipos</option><option>Alquiler de componentes</option></select></div>
+<div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 5px"><label for="gz-mensaje" style="font-weight: 600; font-size: 14px">Mensaje</label><textarea id="gz-mensaje" class="gz-field" name="mensaje" rows="3" placeholder="Cuéntanos sobre tu proyecto: ubicación, alcance y plazos" style="padding: 10px 12px; border: 1px solid #BDBDBD; font-family: 'Barlow', sans-serif; font-size: 16px; resize: vertical; background: #FFFFFF; color: #141414"></textarea></div>
+<div style="grid-column: 1 / -1"><button type="submit" class="gz-btn" style="display: inline-flex; align-items: center; gap: 12px; min-height: 52px; padding: 0 30px; border: 0; background: #C8302F; color: #FFFFFF; cursor: pointer; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 2px">ENVIAR SOLICITUD<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></button></div>
+</form>
+<div id="thanks" hidden role="status" class="gz-zoom" style="min-height: 320px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 14px">
+<div style="width: 60px; height: 60px; border-radius: 50%; background: #C8302F; display: flex; align-items: center; justify-content: center"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"></path></svg></div>
+<h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 34px; line-height: 1">¡GRACIAS POR ESCRIBIRNOS!</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #4A4A4A">Se abrió tu aplicación de correo con el mensaje listo. Solo tienes que enviarlo y nuestro equipo se pondrá en contacto contigo a la brevedad.</p>
+<button type="button" id="resetForm" style="min-height: 46px; padding: 0 22px; border: 2px solid #141414; background: transparent; color: #141414; cursor: pointer; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 2px">ENVIAR OTRO MENSAJE</button>
+</div>
+
+</div>
+</div>
+</section>
+
+<div class="gz-stripe" aria-hidden="true" style="height: 10px"></div>
+
+<footer style="background: #141414; color: #C9C9C9">
+<div style="max-width: 1280px; margin: 0 auto; padding: 44px clamp(20px, 4vw, 48px) 24px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px">
+<div style="flex: 1 1 280px; min-width: 0">
+<img loading="lazy" src="images/logo-guzfesa-blanco.png" alt="Logo GUZFESA Servicios S.R.L." style="width: 180px; height: auto; display: block">
+<p style="margin: 14px 0 0; max-width: 340px; font-size: 15px; line-height: 1.6">Empresa constructora especializada en obras civiles, movimiento de tierras, mantenimiento de infraestructura y alquiler de equipos.</p>
+</div>
+<div style="flex: 0 1 200px; min-width: 0">
+<div style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 3px; color: #FFFFFF">NAVEGACIÓN</div>
+<div style="margin-top: 12px; display: flex; flex-direction: column; gap: 8px; font-size: 15px">
+<a href="#nosotros" style="color: #C9C9C9; text-decoration: none">Nosotros</a>
+<a href="#servicios" style="color: #C9C9C9; text-decoration: none">Servicios</a>
+<a href="#alquiler" style="color: #C9C9C9; text-decoration: none">Alquiler</a>
+<a href="#proyectos" style="color: #C9C9C9; text-decoration: none">Proyectos</a>
+</div>
+</div>
+<div style="flex: 0 1 280px; min-width: 0">
+<div style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 3px; color: #FFFFFF">CONTACTO</div>
+<div style="margin-top: 12px; display: flex; flex-direction: column; gap: 8px; font-size: 15px">
+<a href="tel:8292767396" style="color: #C9C9C9; text-decoration: none">829-276-7396</a>
+<a href="mailto:guzfesaserviciossrl@hotmail.com" style="color: #C9C9C9; text-decoration: none; overflow-wrap: anywhere">guzfesaserviciossrl@hotmail.com</a>
+</div>
+</div>
+</div>
+<div style="margin-top: 32px; padding-top: 18px; border-top: 1px solid #333333; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px; color: #9A9A9A">
+<span>© 2027 GUZFESA Servicios S.R.L. Todos los derechos reservados.</span>
+<span style="display: flex; gap: 6px"><span style="display: block; width: 30px; height: 10px; background: #DF3F40; clip-path: polygon(30% 0, 100% 0, 70% 100%, 0 100%)"></span><span style="display: block; width: 30px; height: 10px; background: #DF3F40; clip-path: polygon(30% 0, 100% 0, 70% 100%, 0 100%)"></span><span style="display: block; width: 30px; height: 10px; background: #FFFFFF; clip-path: polygon(30% 0, 100% 0, 70% 100%, 0 100%)"></span></span>
+</div>
+</div>
+</footer>
+
+</div>
+<script>
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- Portada: paneles que se expanden ---------- */
+  var heroData = [{"title": "CONSTRUCCIÓN"}, {"title": "MOVIMIENTO DE TIERRAS"}, {"title": "INFRAESTRUCTURA"}, {"title": "ALQUILER DE EQUIPOS"}];
+  var panels = Array.prototype.slice.call(document.querySelectorAll('.gz-hp'));
+  var focusNum = document.getElementById('focusNum');
+  var focusTitle = document.getElementById('focusTitle');
+  var focusBox = document.getElementById('focusBox');
+  var heroIdx = 0, heroPaused = false;
+  function restart(el) { if (!el) return; var c = el.cloneNode(true); el.parentNode.replaceChild(c, el); return c; }
+  function setHero(i) {
+    heroIdx = (i + panels.length) % panels.length;
+    panels.forEach(function (p, k) { p.classList.toggle('is-active', k === heroIdx); });
+    if (focusBox) {
+      focusNum.textContent = '0' + (heroIdx + 1);
+      focusTitle.textContent = heroData[heroIdx].title;
+      focusBox = restart(focusBox);
+      focusNum = document.getElementById('focusNum');
+      focusTitle = document.getElementById('focusTitle');
+    }
+  }
+  panels.forEach(function (p, k) {
+    p.addEventListener('mouseenter', function () { if (k !== heroIdx) setHero(k); });
+    p.addEventListener('focus', function () { if (k !== heroIdx) setHero(k); });
+  });
+  var heroWrap = document.getElementById('heroPanels');
+  heroWrap.addEventListener('mouseenter', function () { heroPaused = true; });
+  heroWrap.addEventListener('mouseleave', function () { heroPaused = false; });
+  if (!reduce) setInterval(function () { if (!heroPaused && !document.hidden) setHero(heroIdx + 1); }, 4500);
+
+  /* ---------- Carrusel de servicios ---------- */
+  var track = document.getElementById('svcTrack');
+  var viewport = document.getElementById('svcViewport');
+  var cardsCount = track.children.length;
+  var dotsWrap = document.getElementById('svcDots');
+  var label = document.getElementById('svcLabel');
+  var total = document.getElementById('svcTotal');
+  var idx = 0, paused = false;
+  function perView() { var w = window.innerWidth; return w <= 620 ? 1 : (w <= 980 ? 2 : 3); }
+  function maxIdx() { return Math.max(0, cardsCount - perView()); }
+  function renderDots() {
+    var m = maxIdx();
+    dotsWrap.innerHTML = '';
+    for (var i = 0; i <= m; i++) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'svc-dot' + (i === idx ? ' is-active' : '');
+      b.style.width = i === idx ? '52px' : '26px';
+      b.setAttribute('aria-label', 'Ir a la posición ' + (i + 1));
+      if (i === idx) b.setAttribute('aria-current', 'true');
+      b.innerHTML = '<span>' + (i === idx ? '<i></i>' : '') + '</span>';
+      (function (k) { b.addEventListener('click', function () { go(k); }); })(i);
+      dotsWrap.appendChild(b);
+    }
+  }
+  function go(i) {
+    var m = maxIdx();
+    idx = i < 0 ? m : (i > m ? 0 : i);
+    var per = perView();
+    track.style.transform = 'translateX(calc(-1 * ' + idx + ' * (100% + 20px) / ' + per + '))';
+    label.textContent = '0' + (idx + 1);
+    total.textContent = '0' + (m + 1);
+    renderDots();
+  }
+  document.getElementById('svcPrev').addEventListener('click', function () { go(idx - 1); });
+  document.getElementById('svcNext').addEventListener('click', function () { go(idx + 1); });
+  viewport.addEventListener('mouseenter', function () { paused = true; });
+  viewport.addEventListener('mouseleave', function () { paused = false; });
+  var tx = null;
+  viewport.addEventListener('touchstart', function (e) { tx = e.touches[0].clientX; paused = true; }, { passive: true });
+  viewport.addEventListener('touchend', function (e) {
+    if (tx !== null) { var dx = e.changedTouches[0].clientX - tx; if (dx < -40) go(idx + 1); else if (dx > 40) go(idx - 1); }
+    tx = null; paused = false;
+  });
+  window.addEventListener('resize', function () { go(Math.min(idx, maxIdx())); });
+  go(0);
+  if (!reduce) setInterval(function () { if (!paused && !document.hidden) go(idx + 1); }, 4500);
+
+  /* ---------- Galería con visor ---------- */
+  var gallery = [{"label": "MOVIMIENTO DE TIERRAS", "img": "images/excavadora-obra.jpg"}, {"label": "NAVE INDUSTRIAL", "img": "images/nave-industrial.jpg"}, {"label": "MURO PERIMETRAL", "img": "images/muro-perimetral.jpg"}, {"label": "EQUIPO EN OBRA", "img": "images/equipo-obra.jpg"}, {"label": "ESTRUCTURA METÁLICA", "img": "images/estructura-metalica.jpg"}];
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lbImg');
+  var lbLabel = document.getElementById('lbLabel');
+  var cur = 0, lastFocus = null;
+  function show(i) {
+    cur = (i + gallery.length) % gallery.length;
+    lbImg.src = gallery[cur].img;
+    lbImg.alt = gallery[cur].label;
+    lbLabel.textContent = gallery[cur].label;
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('[data-lb]'), function (b) {
+    b.addEventListener('click', function () {
+      lastFocus = b; show(parseInt(b.getAttribute('data-lb'), 10)); lb.hidden = false;
+      document.getElementById('lbClose').focus();
+    });
+  });
+  function close() { lb.hidden = true; if (lastFocus) lastFocus.focus(); }
+  document.getElementById('lbClose').addEventListener('click', close);
+  document.getElementById('lbPrev').addEventListener('click', function () { show(cur - 1); });
+  document.getElementById('lbNext').addEventListener('click', function () { show(cur + 1); });
+  lb.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') show(cur - 1);
+    if (e.key === 'ArrowRight') show(cur + 1);
+  });
+
+  /* ---------- Formulario: abre el correo con el mensaje listo ---------- */
+  var form = document.getElementById('contactForm');
+  var thanks = document.getElementById('thanks');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = form.elements;
+    var subject = 'Solicitud de cotización: ' + f.servicio.value;
+    var bodyTxt = 'Nombre: ' + f.nombre.value + '\nEmpresa: ' + f.empresa.value + '\nCorreo: ' + f.correo.value +
+      '\nTeléfono: ' + f.telefono.value + '\nServicio: ' + f.servicio.value + '\n\n' + f.mensaje.value;
+    window.location.href = 'mailto:guzfesaserviciossrl@hotmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(bodyTxt);
+    form.hidden = true; thanks.hidden = false;
+  });
+  document.getElementById('resetForm').addEventListener('click', function () { form.reset(); thanks.hidden = true; form.hidden = false; });
+})();
+</script>
+</body>
+</html>
